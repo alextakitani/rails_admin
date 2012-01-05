@@ -32,7 +32,7 @@ module RailsAdmin
       attr_accessor :main_app_name
 
       # If the main app is hosted in a subdir, modify it
-      attr_accessor_with_default :main_app_subdir, ''
+      attr_accessor :main_app_subdir, ''
 
       # Configuration option to specify which models you want to exclude.
       attr_accessor :excluded_models
@@ -262,6 +262,7 @@ module RailsAdmin
         @total_columns_width = 697
         @label_methods = [:name, :title]
         @main_app_name = Proc.new { [Rails.application.engine_name.titleize.chomp(' Application'), 'Admin'] }
+        @main_app_subdir = ''
         @registry = {}
       end
 
