@@ -31,6 +31,9 @@ module RailsAdmin
       # Application title, can be an array of two elements
       attr_accessor :main_app_name
 
+      # If the main app is hosted in a subdir, modify it
+      attr_accessor_with_default :main_app_subdir, ''
+
       # Configuration option to specify which models you want to exclude.
       attr_accessor :excluded_models
 
